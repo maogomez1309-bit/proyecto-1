@@ -8,44 +8,56 @@
 
 /* Estilo global para el cuerpo del documento */
 body {
-    font-family: Arial, sans-serif; /* Define la fuente principal del sitio. */
-    color: #ffffff; /* Establece el color del texto en blanco. */
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;/* Define la fuente principal del sitio. */
+    color: black; /* Establece el color del texto en blanco. */
     line-height: 1.6; /* Mejora la legibilidad al establecer la altura de línea. */
-    background: url('background.jpg') no-repeat center center fixed; /* Imagen de fondo centrada y fija. */
-    background-size: cover; /* Asegura que la imagen de fondo cubra todo el espacio. */
-    overflow-x: hidden; /* Previene el desplazamiento horizontal. */
+    background-color: #733702;
 }
 
 /* Estilo del encabezado */
 header {
-    position: fixed; /* Hace que el encabezado permanezca visible al hacer scroll. */
-    top: 0; /* Lo posiciona en la parte superior de la página. */
-    width: 100%; /* Abarca todo el ancho de la ventana. */
-    background-color: rgba(0, 0, 0, 0.9); /* Fondo semitransparente para contraste. */
-    padding: 10px 20px; /* Espaciado interno para los elementos del encabezado. */
-    display: flex; /* Utiliza diseño flexible para organizar los elementos horizontalmente. */
-    justify-content: space-between; /* Distribuye los elementos en extremos opuestos. */
-    align-items: center; /* Alinea verticalmente los elementos del encabezado. */
-    z-index: 1000; /* Asegura que el encabezado esté siempre encima de otros elementos. */
+    position: fixed;
+    /* Fija el header en la parte superior al hacer scroll */
+    top: 0;
+    /* Se ancla al borde superior */
+    width: 100%;
+    /* Ocupa todo el ancho */
+    background-color: var(--color-secondary);
+    /* Fondo lila */
+    padding: 10px 0px;
+    /* Espaciado interno */
+    display: flex;
+    /* Distribuye logo y menú en línea */
+    justify-content: space-between;
+    /* Separa logo a la izquierda y menú a la derecha */
+    align-items: center;
+    /* Centra verticalmente */
+    z-index: 1000;
+    /* Garantiza que quede sobre el resto del contenido */
+    box-shadow: var(--shadow);
+    /* Añade una ligera sombra inferior */
+}
+nav {
+    display: flex ;
+    margin-top: 8px;
+    
 }
 
-/* Estilo del título en el encabezado */
-header h1 {
-    font-size: 1.8em; /* Tamaño del texto del título. */
-    color: #00bfff; /* Azul claro para resaltar el título. */
-}
+
 
 /* Navegación dentro del encabezado */
 header nav ul {
     list-style: none; /* Elimina los puntos de lista predeterminados. */
     display: flex; /* Muestra los elementos de la lista en una fila. */
-    gap: 20px; /* Espaciado entre los elementos de la lista. */
+    gap: 2em; /* Espaciado entre los elementos de la lista. */
+    margin-top: 0.4rem;
+    margin-left: 15px;
 }
 
 /* Estilo de los enlaces de la barra de navegación */
 header nav ul li a {
     text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces. */
-    color: #ffffff; /* Color de texto blanco. */
+    color: #F2D4C2; /* Color de texto blanco. */
     font-weight: bold; /* Resalta los enlaces con texto en negrita. */
     padding: 5px 10px; /* Espaciado interno en los enlaces. */
     border-radius: 4px; /* Bordes redondeados para los enlaces. */
@@ -54,8 +66,8 @@ header nav ul li a {
 
 /* Efecto al pasar el cursor sobre los enlaces */
 header nav ul li a:hover {
-    background-color: #00bfff; /* Fondo azul claro al pasar el cursor. */
-    color: #000; /* Cambia el color del texto a negro. */
+    color:#732E06; /* Cambia el color del texto a negro. */
+    background-color: #F2F2F2 ;
 }
 
 /* Espaciado superior para evitar solapamiento con el encabezado fijo */
@@ -65,25 +77,23 @@ main {
 
 /* Sección de contenido */
 section {
-    min-height: 100vh; /* Cada sección ocupa al menos el 100% de la altura de la ventana. */
+      min-height: 100vh; /* Cada sección ocupa al menos el 100% de la altura de la ventana. */
+    min-width: 100%;
     padding: 60px 20px; /* Espaciado interno para el contenido. */
     text-align: center; /* Centra el texto. */
-    background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente para legibilidad. */
+    background-color: #F2D4C2; /* Fondo semitransparente para legibilidad. */
     margin-bottom: 20px; /* Espaciado entre secciones. */
+    justify-content: center;
 }
 
 /* Títulos dentro de las secciones */
 section h2 {
     font-size: 2.5em; /* Tamaño grande para destacar títulos. */
     margin-bottom: 20px; /* Espaciado inferior para separación del texto. */
-    color: #00bfff; /* Azul claro para los títulos. */
+    color: #683001; /* Azul claro para los títulos. */
 }
 
-/* Texto y listas dentro de las secciones */
-section p, section ul {
-    font-size: 1.2em; /* Tamaño más grande para mejorar legibilidad. */
-    margin: 10px 0; /* Espaciado superior e inferior. */
-}
+
 
 /* Contenedor del formulario */
 .form-container {
@@ -98,7 +108,7 @@ section p, section ul {
 /* Título del formulario */
 .form-container h2 {
     text-align: center; /* Centra el texto del título. */
-    color: #004a8f; /* Azul oscuro para resaltar. */
+    color: #40322B; /* Azul oscuro para resaltar. */
     margin-bottom: 20px; /* Espaciado inferior para separar del formulario. */
 }
 
@@ -116,7 +126,7 @@ section p, section ul {
 .form-container button {
     width: 100%; /* Ocupa todo el ancho disponible. */
     padding: 10px; /* Espaciado interno. */
-    background-color: #004a8f; /* Fondo azul oscuro. */
+    background-color: #40322B; /* Fondo azul oscuro. */
     color: #ffffff; /* Texto blanco. */
     font-size: 16px; /* Tamaño del texto del botón. */
     border: none; /* Sin borde adicional. */
@@ -127,7 +137,7 @@ section p, section ul {
 
 /* Efecto al pasar el cursor sobre el botón */
 .form-container button:hover {
-    background-color: #00376b; /* Azul más oscuro al pasar el cursor. */
+    background-color: #F2F2F2; /* Azul más oscuro al pasar el cursor. */
 }
 
 /* Pie de página */

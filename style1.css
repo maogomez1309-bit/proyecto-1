@@ -1,0 +1,465 @@
+/* =========================================================
+    🎨 ESTILOS BASE - LANDING PAGE XIGNA
+   ========================================================= */
+
+/* -------------------
+    Variables globales
+   ------------------- */
+:root {
+    /* Fondo general de la página */
+    --color-bg:#F2F2F2 ;
+    /* Color principal (celeste) para botones y títulos */
+    --color-primary: #733702;
+    /* Color secundario (lila) para cabecera y acentos */
+    --color-secondary: #733702;
+    /* Color acento (marrón oscuro) para texto principal */
+    --color-accent: #592B02;
+    /* Color base para texto */
+    --color-text: #333;
+    /* Blanco puro para fondos y contrastes */
+    --color-light: #fff;
+    /* Sombra estándar usada en tarjetas, header y footer */
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* -------------------
+    Reset y tipografía
+   ------------------- */
+* {
+    /* Elimina márgenes y rellenos por defecto */
+    margin: 0;
+    padding: 0;
+    /* Asegura que los bordes y rellenos se incluyan dentro del tamaño del elemento */
+    box-sizing: border-box;
+}
+
+body {
+    /* Fuente principal (moderna y legible) */
+    font-family: 'Poppins', 'Lucida Sans', sans-serif;
+    /* Color de fondo general */
+    background-color: #F2F2F2(--color-bg);
+    /* Color de texto base */
+    color: var(--color-text);
+    /* Altura de línea cómoda para lectura */
+    line-height: 1.6;
+    /* Desplazamiento suave al hacer clic en enlaces ancla */
+    scroll-behavior: smooth;
+}
+
+/* =========================================================
+    🧭 ENCABEZADO Y NAVEGACIÓN
+   ========================================================= */
+
+header {
+    position: fixed;
+    /* Fija el header en la parte superior al hacer scroll */
+    top: 0;
+    /* Se ancla al borde superior */
+    width: 100%;
+    /* Ocupa todo el ancho */
+    background-color: var(--color-secondary);
+    /* Fondo lila */
+    padding: 10px 40px;
+    /* Espaciado interno */
+    display: flex;
+    /* Distribuye logo y menú en línea */
+    justify-content: space-between;
+    /* Separa logo a la izquierda y menú a la derecha */
+    align-items: right;
+    /* Centra verticalmente */
+    z-index: 1000;
+    /* Garantiza que quede sobre el resto del contenido */
+    box-shadow: var(--shadow);
+    /* Añade una ligera sombra inferior */
+    
+}
+
+header img {
+    max-width: 400px;
+    /* Tamaño máximo del logo */
+    
+
+}
+
+nav ul {
+    list-style: none;
+    /* Quita las viñetas de lista */
+    display: flex;
+    /* Los elementos <li> quedan en línea */
+    gap: 2rem;
+    /* Espaciado horizontal entre enlaces */
+    
+}
+
+nav ul li a {
+    text-decoration: none;
+    /* Quita el subrayado */
+    color: var(--color-light);
+    /* Texto blanco */
+    font-weight: 600;
+    /* Negrita moderada */
+    padding: 6px 12px;
+    /* Espaciado interno para clics cómodos */
+    border-radius: 6px;
+    /* Bordes redondeados */
+    transition: all 0.3s ease;
+    /* Transición suave al pasar el mouse */
+    
+}
+
+nav ul li a:hover {
+    background-color: #F2F2F2;
+    /* Fondo blanco al pasar el mouse */
+    color: #732E06 
+    /* Texto marrón al pasar el mouse */
+}
+h2{
+    color: #faf1ed;
+    /* Color marrón */
+}
+
+/* =========================================================
+    🧩 SECCIONES GENERALES
+   ========================================================= */
+
+main {
+    padding-top: 100px;
+    /* Deja espacio para el header fijo */
+}
+
+section {
+    min-height: 100vh;
+    /* Cada sección ocupa al menos la altura de la ventana */
+    padding: 60px 5%;
+    /* Espaciado interno */
+    background-color: #F2F2F2;
+    /* Fondo blanco por defecto */
+    text-align: center;
+    /* Centra los textos */
+}
+
+section h2 {
+    font-size: 2.5em;
+    /* Tamaño grande para títulos */
+    margin-bottom: 20px;
+    /* Espacio debajo del título */
+    color: #40322B;
+    /* Color marrón */
+}
+
+section>div {
+    max-width: 1200px;
+    /* Ancho máximo del contenido */
+    margin: 0 auto;
+    /* Centra el bloque */
+}
+
+/* =========================================================
+    🏁 SECCIÓN INICIO
+   ========================================================= */
+
+#inicio {
+    display: flex;
+    /* Distribuye elementos lado a lado */
+    align-items: center;
+    /* Centra verticalmente */
+    justify-content: center;
+    /* Centra horizontalmente */
+    gap: 40px;
+    /* Espacio entre elementos */
+    flex-wrap: wrap;
+    /* Permite que se apilen en pantallas pequeñas */
+    background: url('imagen\ 2Mv.jpeg') center/cover no-repeat fixed; 
+    /* Imagen de fondo fija y adaptada */
+    color: #F2F2F2(--color-light);
+    /* Texto blanco sobre fondo */
+}
+
+#inicio h2 {
+    font-size: 3em;
+    /* Título principal grande */
+    margin-top: 10px;
+}
+
+#inicio h3 {
+    color: var(--color-primary);
+    /* Subtítulo celeste */
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    
+}
+p {
+    font-size: 1.1em;
+    /* Texto ligeramente más grande */
+    margin: bottom 20px;;
+    color: #40322B;
+    /* Color marrón */
+}
+
+.inicio img {
+    max-width: 400px;
+    /* Imagen representativa */
+    border-radius: 10px;
+    /* Bordes suaves */
+    box-shadow: var(--shadow);
+    /* Sombra ligera */
+}
+
+/* =========================================================
+    💼 SOBRE NOSOTROS
+   ========================================================= */
+
+#sobre-nosotros {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Adaptable a móviles */
+    gap: 40px;
+    background: url('imagen\ 2Mv.jpeg') center/cover no-repeat fixed; 
+}
+
+.nosotros img {
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.nosotros h2 {
+    color: var(--color-secondary);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+
+
+/* =========================================================
+    💰 PRECIOS
+   ========================================================= */
+
+#productos {
+    background-color:#F2F2F2;
+    background: url('imagen\ 2Mv.jpeg') center/cover no-repeat fixed;
+}
+
+.planes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.precios {
+    background-color: #F2D4C2;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    border: 1px solid #cccccc7e;
+    flex: 1 1 300px;
+    max-width: 350px;
+    padding: 10px 20px 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.precios:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.precios img {
+    max-width: 200px;
+    margin: 20px auto;
+    display: block;
+}
+
+/* =========================================================
+    📬 CONTACTO
+   ========================================================= */
+
+#contacto {
+
+    background: url('imagen\ 2Mv.jpeg') center/cover no-repeat fixed; 
+}
+
+.supercontacto {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+/* Contenedor del formulario */
+.form-container {
+    margin: 180px 80px 30px;
+    width: 100%;
+    /* Ocupa el 100% del ancho disponible. */
+    max-width: 500px;
+    /* Limita el ancho máximo del formulario. */
+    max-height: 450px;
+    background-color: #F2F2F2;
+    /* Fondo blanco para contraste. */
+    padding: 20px;
+    /* Espaciado interno del formulario. */
+    border-radius: 8px;
+    /* Bordes redondeados para un diseño más agradable. */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra para dar profundidad. */
+
+
+}
+
+.mapa {
+    margin: auto;
+}
+
+.mapa iframe {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Título del formulario */
+.form-container h2 {
+    text-align: center;
+    /* Centra el texto del título. */
+    color: #733702;
+    /* Azul oscuro para resaltar. */
+    margin-bottom: 20px;
+    /* Espaciado inferior para separar del formulario. */
+
+}
+
+/* Campos del formulario */
+.form-container input,
+.form-container textarea {
+    width: 100%;
+    /* Ocupa todo el ancho del contenedor. */
+    padding: 10px;
+    /* Espaciado interno para comodidad al escribir. */
+    margin-bottom: 15px;
+    /* Espaciado inferior entre los campos. */
+    border: 1px solid #ccc;
+    /* Borde gris claro. */
+    border-radius: 5px;
+    /* Bordes redondeados. */
+    font-size: 16px;
+    /* Tamaño de texto estándar. */
+}
+
+/* Botón de envío del formulario */
+.form-container button {
+    width: 100%;
+    /* Ocupa todo el ancho disponible. */
+    padding: 10px;
+    /* Espaciado interno. */
+    background-color: #733702;
+    /* Fondo azul oscuro. */
+    color: #ffffff;
+    /* Texto blanco. */
+    font-size: 16px;
+    /* Tamaño del texto del botón. */
+    border: none;
+    /* Sin borde adicional. */
+    border-radius: 5px;
+    /* Bordes redondeados. */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre el botón. */
+    transition: background-color 0.3s ease;
+    /* Transición suave al cambiar el color. */
+}
+
+/* Efecto al pasar el cursor sobre el botón */
+.form-container button:hover {
+    background-color: #F2D4C2;
+    /* Azul más oscuro al pasar el cursor. */
+}
+
+/* =========================================================
+    ⚓ PIE DE PÁGINA
+   ========================================================= */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color:#732E06;
+    box-shadow: var(--shadow);
+    color:#F2F2F2;
+    text-decoration: none
+}
+    a {
+        color: #F2F2F2;
+        text-decoration: none;
+        padding: 30px;
+
+    }
+
+footer p {
+    color: #F2F2F2;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+
+
+
+/* =========================================================
+    📱 DISEÑO RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 992px) {
+
+    /* Ajustes para tablets y pantallas medianas */
+    header {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #inicio h2 {
+        font-size: 2.2em;
+    }
+
+    .tarjetas,
+    .precios {
+        max-width: 100%;
+        /* Tarjetas y precios ocupan todo el ancho */
+    }
+}
+
+@media (max-width: 600px) {
+
+    /* Ajustes para móviles */
+    section {
+        padding: 40px 20px;
+    }
+
+    #inicio {
+        background-attachment: scroll;
+        /* Mejora rendimiento móvil */
+    }
+
+    #inicio h2 {
+        font-size: 1.8em;
+    }
+
+    /* Todas las imágenes se adaptan al ancho */
+    .inicio img,
+    .nosotros img,
+    .tarjetas img,
+    .precios img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .mapa iframe {
+        height: 300px;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+}
